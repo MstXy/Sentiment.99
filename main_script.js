@@ -227,7 +227,8 @@ function gotSoundResult(error, result) {
   // console.log(result[0]);
   answer = result[0].label;
   if ((answer == "yes" || answer == "no") && timer <= 10 && timer >= 0) {
-    if (!prevent) {
+    // if (!prevent) {
+    if (timer <= 10 && timer >= 0) {
       prevent = true;
       console.log(prevent);
       let label = (answer=="yes") ? 0:1; // convert answer to label: yes=0, no=1;
