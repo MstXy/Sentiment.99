@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Levi Adobe Dia";
+  src: url("fonts/Adobe Dia.ttf") format("ttf");
+}
+
 html {
-  font-family: Inconsolata;
+  font-family: Levi Adobe Dia;
+  background-color: #333333;
+  /* background-color: blue; */
+  color: #ffb31c;
 }
 
 body {
@@ -44,28 +52,25 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 20pt;
+  font-size: 24pt;
 }
 #sentenceSentimentTitle {
   /* position: absolute;
   top: 10%; */
-  font-size: 16pt;
+  font-size: 20pt;
 }
 #sentenceSentiment {
-  font-size: 16pt;
+  font-size: 20pt;
 }
 
-#useResult {
-  font-size: 16pt;
-}
 
 #question {
-  font-size: 30pt;
+  font-size: 36pt;
   font-weight: bold;
   display: none;
 }
 #timerDigit {
-  font-size: 24pt;
+  font-size: 28pt;
   display: none;
 }
 
@@ -82,18 +87,26 @@ body {
 }
 
 #finalScoreText {
-  font-size: 45pt;
+  font-size: 55pt;
 }
 
 #message {
-  font-size: 45pt;
+  font-size: 55pt;
 }
 .longMessage {
-  font-size: 24pt;
+  font-size: 32pt;
 }
-.btn {
 
-  font-size: 45pt;
+.btn {
+  background-color: #ffb31c;
+  /* background-color: blue; */
+  color: #333333;
+  font-size: 36pt;
+  font-family: Levi Adobe Dia;
+  width: 100px;
+}
+.btn:hover {
+  cursor: pointer;
 }
 
 #conclusion-container {
@@ -106,8 +119,8 @@ body {
   display: none;
 }
 #conclusion1-container {
-  font-size: 24pt;
-  height: 35%;
+  font-size: 28pt;
+  height: 40%;
   overflow-y  : scroll;
 }
 #conclusion2-container {
@@ -115,66 +128,4 @@ body {
 }
 #finallyBtn:hover {
   cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* from CSS Scan, button 28: https://getcssscan.com/css-buttons-examples */
-/* button style */
-.btn {
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #1A1A1A;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #3B3B3B;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: normal;
-  margin: 0;
-  min-height: 60px;
-  min-width: 0;
-  outline: none;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 200px;
-  will-change: transform;
-}
-
-.btn:disabled {
-  pointer-events: none;
-}
-
-.btn:hover {
-  color: #fff;
-  background-color: #1A1A1A;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  /* transform: translateY(-2px); */
-}
-
-.btn:active {
-  box-shadow: none;
-  /* transform: translateY(0); */
 }

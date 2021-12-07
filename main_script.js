@@ -51,8 +51,8 @@ var r = function( p ) { // p could be any variable name
     p.frameRate(50);
     // @@@@@@@@@@@@
     // get to the end button for testing
-    var nextButton = p.createButton("end");
-    nextButton.mousePressed(showEnd);
+    // var nextButton = p.createButton("end");
+    // nextButton.mousePressed(showEnd);
     // @@@@@@@@@@@@@@@@@@@
     p.question = p.createP("Is it Ethical or Not?");
       p.question.id("question");
@@ -96,7 +96,8 @@ var r = function( p ) { // p could be any variable name
 var s = function( p ) { // p could be any variable name
   p.setup = function() {
     if (VIDEO_FLAG) {
-      p.createCanvas(videoWidth,videoHeight);
+      p.padding = 10;
+      p.createCanvas(videoWidth+2*p.padding,videoHeight+2*p.padding);
       capture = p.createCapture(p.VIDEO);
       capture.size(videoWidth, videoHeight);
       capture.hide();
@@ -106,15 +107,19 @@ var s = function( p ) { // p could be any variable name
   p.draw = function() {
     // background(255);
     if (VIDEO_FLAG) {
+      // frame
+      p.noStroke();
+      p.fill("#ffb31c");
+      p.rect(0,0, p.width, p.height);
       p.push();
         //move image by the width of image to the left
-        p.translate(capture.width, 0);
+        p.translate(videoWidth+2*p.padding, 0);
         //then scale it by -1 in the x-axis
         //to flip the image
         p.scale(-1, 1);
         //draw video capture feed as image inside p5 canvas
-        p.image(capture, 0, 0, videoWidth, videoHeight);
-        p.filter(p.GRAY);
+        p.image(capture, p.padding, p.padding, videoWidth, videoHeight);
+        // p.filter(p.GRAY);
       p.pop();
     }
   };
@@ -144,7 +149,7 @@ var t = function( p ) { // p could be any variable name
     sentenceIdx = Math.floor(p.random(0, currentDataset.length));
     sentenceText.html(currentDataset[sentenceIdx].input);
     if (questionIdx >= 14) {
-      sentenceText.style("font-size", "10pt");
+      sentenceText.style("font-size", "16pt");
     }
     sentenceSentiment.html(currentDataset[sentenceIdx].sentiment);
   }
@@ -161,6 +166,7 @@ var u = function( p ) { // p could be any variable name
     var canvasDiv = document.getElementById('tensor-container');
     width = canvasDiv.offsetWidth;
     p.createCanvas(width,width/2);
+    p.colorMode(HSB);
     // // Load the model.
     // use.load().then(model => {
     //   encoder = model;
@@ -192,7 +198,8 @@ var u = function( p ) { // p could be any variable name
     var line = 0;
     for (var i = 0; i < tensor.length; i++) {
       p.noStroke();
-      p.fill(p.map(tensor[i], -0.05, 0.05, 0, 255));
+      let b = p.map(tensor[i], -0.05, 0.05, 0, 100);
+      p.fill(40, 90, b);
 
       if (i % 32 == 0) {
         line++;
@@ -309,12 +316,12 @@ function showMissed() {
     let message = createP("Decent, you kept your job."); // set to change
         message.id("message");
         message.parent("result-container");
-  } else if (missed >= 2 && missed <= 4) {
+  } else if (missed >= 2 && missed <= 3) {
     finalScoreText.style("color", "#cc9c00");
     let message = createP("Ok, we might have to re-evaluate your ability."); // set to change
         message.id("message");
         message.parent("result-container");
-  } else if (missed >= 5) {
+  } else if (missed >= 4) {
     finalScoreText.style("color", "#cc9c00");
     let message = createP("Oops, you are fired."); // set to change
         message.id("message");
@@ -368,6 +375,7 @@ var c = function( p ) { // p could be any variable name
     divHeight = canvasDiv.offsetHeight;
     marginX = 20;
     p.createCanvas(divWidth,divHeight);
+    p.colorMode(HSB);
     p.clickBoxes = [];
 
     for (var i = 0; i < 15; i++) {
@@ -386,7 +394,8 @@ var c = function( p ) { // p could be any variable name
     var line = 0;
     for (var i = 0; i < tensor.length; i++) {
       p.noStroke();
-      p.fill(p.map(tensor[i], -0.05, 0.05, 0, 255));
+      let b = p.map(tensor[i], -0.05, 0.05, 0, 100);
+      p.fill(40, 90, b);
 
       if (i % 32 == 0) {
         line++;

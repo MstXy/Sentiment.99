@@ -1,6 +1,6 @@
 import json
 
-with open('cm_99.json', encoding="utf-8") as f:
+with open('data/cm_99.json', encoding="utf-8") as f:
     data = json.load(f)
 
 newData = []
@@ -27,9 +27,9 @@ newData = []
 
 # filter out long (long AITA)
 for d in data:
-    if len(d["input"]) > 750:
+    if len(d["input"]) > 1000 and len(d["input"]) < 2000:
         newData.append(d)
 #300-750
 
-with open('cm_99_long.json', 'w') as outfile:
+with open('data/cm_99_long.json', 'w') as outfile:
     json.dump(newData, outfile)

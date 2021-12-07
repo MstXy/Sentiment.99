@@ -13,7 +13,10 @@ function setup() {
 
   submitBtn = createButton('submit');
   submitBtn.class("btn");
+  submitBtn.parent("flex");
   sentimentResult = createP('Sentiment score:');
+  sentimentResult.parent("flex");
+
 
   // predicting the sentiment on mousePressed()
   submitBtn.mousePressed(getSentiment);

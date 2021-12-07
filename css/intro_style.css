@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Levi Adobe Dia";
+  src: url("fonts/Adobe Dia.ttf") format("ttf");
+}
 html {
-  font-family: Inconsolata;
+  /* font-family: Inconsolata; */
+  font-family: Levi Adobe Dia;
+  background-color: #333333;
+  /* background-color: blue; */
+  color: #ffb31c;
 }
 
 body {
@@ -9,8 +17,9 @@ body {
 a {
   color: #00db9d;
 }
-i {
-  color: #9d00db;
+i.emphasis {
+  /* color: #9d00db; */
+  color: #b700ff
 }
 
 #sec1 {
@@ -21,13 +30,22 @@ i {
   text-align: center;
 }
 #title {
-  font-size: 45pt;
+  font-size: 60pt;
 }
 #credit {
-  font-size: 25pt;
+  font-size: 30pt;
 }
 #sec1Btn {
-  font-size: 20pt;
+  width: 150px;
+  font-size: 25pt;
+}
+.secBtn {
+  margin:auto;
+  background-color: #ffb31c;
+  color: #333333;
+}
+.secBtn p {
+  margin: 0;
 }
 .secBtn:hover {
   cursor: pointer;
@@ -42,18 +60,16 @@ i {
   left: 50%;
   width: 60%;
   transform: translate(-50%, 0);
-  font-size: 18pt;
+  font-size: 24pt;
 }
 #img1 {
   margin:auto;
 }
 #img1_credit {
-  font-size: 12pt;
+  font-size: 18pt;
   margin:auto;
 }
-#sec2Btn {
-  margin:auto;
-}
+
 
 #sec3 {
   display: none;
@@ -64,20 +80,18 @@ i {
   left: 50%;
   width: 60%;
   transform: translate(-50%, 0);
-  font-size: 18pt;
+  font-size: 24pt;
 }
 #img2 {
   margin:auto;
 }
 #img2_credit {
-  font-size: 12pt;
-  margin:auto;
-}
-#sec3Btn {
+  font-size: 18pt;
   margin:auto;
 }
 
+
 hr {
-  border-top: 2px solid black;
+  border: 2px solid #ffb31c;
   width: 100%;
 }
