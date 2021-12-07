@@ -1,0 +1,180 @@
+html {
+  font-family: Inconsolata;
+}
+
+body {
+  margin: 0;
+}
+
+
+#text-container {
+  position: absolute;
+  height: 100%;
+  width: 60%;
+  top: 50%;
+  left: 5%;
+  transform: translate(0, -50%);
+}
+#tensor-container {
+  position: absolute;
+  width: 20%;
+  top: 75%;
+  left: 5%;
+}
+#video-container {
+  position: absolute;
+  width: 320px;
+  height: 240px;
+  right: 5%;
+  top: 70%;
+  transform: translate(0, -50%);
+}
+#question-container {
+  position: absolute;
+  width: 320px;
+  height: 240px;
+  right: 5%;
+  top: 20%;
+  transform: translate(0, -50%);
+}
+
+#sentenceText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 20pt;
+}
+#sentenceSentimentTitle {
+  /* position: absolute;
+  top: 10%; */
+  font-size: 16pt;
+}
+#sentenceSentiment {
+  font-size: 16pt;
+}
+
+#useResult {
+  font-size: 16pt;
+}
+
+#question {
+  font-size: 30pt;
+  font-weight: bold;
+  display: none;
+}
+#timerDigit {
+  font-size: 24pt;
+  display: none;
+}
+
+
+#result-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  display: none;
+}
+
+#finalScoreText {
+  font-size: 45pt;
+}
+
+#message {
+  font-size: 45pt;
+}
+.longMessage {
+  font-size: 24pt;
+}
+.btn {
+
+  font-size: 45pt;
+}
+
+#conclusion-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#conclusion1-container {
+  font-size: 24pt;
+  height: 35%;
+  overflow-y  : scroll;
+}
+#conclusion2-container {
+  height: 60%;
+}
+#finallyBtn:hover {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* from CSS Scan, button 28: https://getcssscan.com/css-buttons-examples */
+/* button style */
+.btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  will-change: transform;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  /* transform: translateY(-2px); */
+}
+
+.btn:active {
+  box-shadow: none;
+  /* transform: translateY(0); */
+}
