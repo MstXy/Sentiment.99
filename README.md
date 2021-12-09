@@ -18,7 +18,7 @@ This project is built using p5.js, ml5.js and TensorFlow.js and it addresses two
 [5. Design](#5-design)
 
 
-[6. Reflection & Future Developments](6-reflection-&-future-developments)
+[6. Reflection & Future Developments](6-reflection--future-developments)
   
 
 ### 1. Inspiration
