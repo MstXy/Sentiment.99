@@ -9,9 +9,9 @@ This project is built using p5.js, ml5.js and TensorFlow.js and it addresses two
 
 [1. Inspriation](#1-inspiration)
 
-[2. Text Sentiment Analysis](#2-text-sentiment-analysis)
+[2. Issues in Text Sentiment Analysis](#2-issues-in-text-sentiment-analysis)
 
-[3. Data Annotation](#3-data-annotation)
+[3. Issues in Data Annotation](#3-issues-in-data-annotation)
 
 [4. Technology](#4-technology)
 
@@ -28,7 +28,7 @@ Another inspiration comes from [Ask Delphi](https://delphi.allenai.org/), which 
 
 Finally, another AI issue I kept thinking of is the infrastructure behind AI: energy consumption, server storage, and manual data labeling process. While the other topics seems a little bit hard to address on in this project, the idea of AI taking away basic jobs and giving back a even worse job - data labeling could fit well into my project. Because I found the individual datapoints in the ETHICS dataset quite interesting to look at and think about, I think it would be interesting to let the user also look into the data (as the role of a data annotator), and see how different they may answer compare to the "ground-truth label" (which is also given by data annotators). The idea of using voice to give the data label comes from the 2018 award-winning documentary [*The Cleaners*](https://www.imdb.com/title/tt7689936/), where in several scenes the internet cleaners speak out "Delete" or "Do not delete", though they are actually clicking on the interfaces. By speaking it out, it sort of empahsize on my point that data annotation is boring, mind-numbing and even a bit dark, regarding its under-the-hood, exploitative and low-payment nature.
 
-### 2. Issues on Text Sentiment Analysis
+### 2. Issues in Text Sentiment Analysis
 Sentiment analysis is the process of studying people’s opinions and emotions, generally using language clues. ML5.js's sentiment model is a pre-trained model trained on IMDB reviews to detect whether the sentiment of text is positive or negative.
 
 The sentiment analysis result is a score between 0 and 1, with 0 being negative and 1 being positive. For example:
