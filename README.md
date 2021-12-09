@@ -66,7 +66,9 @@ While we would expect the dataset to be annotated by 'researchers', in most case
 Working as a data labeler/annotator, you are forced to work fast for just these poorly-paid wages. And all that comes out of your labelling interface, go into the AI training and propagates as AI algorithms in the use.
 
 ### 4. Technology
-
+#### Text Sentiment Analysis
+The first tool is ML5.js's [sentiment model](https://learn.ml5js.org/#/reference/sentiment), I use JavaScript to read the csv's in the dataset, and run the sentiment model in p5.js's setup function, and select those text having a sentiment score higher than 0.99 (which is far more than I had expected!) and try to store them in JSON format, which is easier for future usage. I also write the calculated sentiment score in the JSON to avoid future repetitive work. However, JavaScript does not have the ability to write to files, and the only solution will be using node.js / npm packages (which I am not at all familiar of using). So I took the alternative, set the compiled JSON to a p element in the HTML and directly copy the innerHTML to the .json file I created. Because JSON does not need indentation to work and my dataset is not that big, this approach worked well.
+Because this project is based on text and users should have a more thorough understanding of how text sentiment works, at the end of this project I add a page for the user to experiment with the ml5.js sentiment model. And the interesting discovery is that, once I set the default value of the input sentence to be "Today is the happiest day and is full of rainbows!", even adding negative sentences after that will still make this sentence receiving a highly positive sentiment score.
 
 ### 5. Design
 
