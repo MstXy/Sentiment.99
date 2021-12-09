@@ -28,7 +28,33 @@ Another inspiration comes from [Ask Delphi](https://delphi.allenai.org/), which 
 
 Finally, another AI issue I kept thinking of is the infrastructure behind AI: energy consumption, server storage, and manual data labeling process. While the other topics seems a little bit hard to address on in this project, the idea of AI taking away basic jobs and giving back a even worse job - data labeling could fit well into my project. Because I found the individual datapoints in the ETHICS dataset quite interesting to look at and think about, I think it would be interesting to let the user also look into the data (as the role of a data annotator), and see how different they may answer compare to the "ground-truth label" (which is also given by data annotators). The idea of using voice to give the data label comes from the 2018 award-winning documentary [*The Cleaners*](https://www.imdb.com/title/tt7689936/), where in several scenes the internet cleaners speak out "Delete" or "Do not delete", though they are actually clicking on the interfaces. By speaking it out, it sort of empahsize on my point that data annotation is boring, mind-numbing and even a bit dark, regarding its under-the-hood, exploitative and low-payment nature.
 
-### 2. Text Sentiment Analysis
+### 2. Issues on Text Sentiment Analysis
+Sentiment analysis is the process of studying people’s opinions and emotions, generally using language clues. ML5.js's sentiment model is a pre-trained model trained on IMDB reviews to detect whether the sentiment of text is positive or negative.
+
+The sentiment analysis result is a score between 0 and 1, with 0 being negative and 1 being positive. For example:
+
+* Score 0.999: *Today is the happiest day and is full of rainbows!*
+
+* Score 0.001: *This show is actually so bad and depressing to watch.*
+
+Sentiment analysis, due to its (alleged) simple nature and efficiency, has been widely used, for example, in recommender systems on reviews and feedbacks. More generally, sentiment analysis is used to categorize and filter texts.
+
+However, **are sentiment analysis accurate?**
+
+There are, indeed, some pitfalls on the general sentiment analysis problem, where the sentiment analyzer may fail to give accurate results.
+
+* Irony and sarcasm
+* Types of negations
+* Word ambiguity
+* Multipolarity
+The problem Irony and sarcasm is easy to understand, as sometimes even human cannot identify the sarcasm. For nagation, negation can be implicitly expressed without prefixes such as "non-", "dis-", and without "not". As for ambiguity, one word could have different meanings in different context. Take "unpredictable" as an example, a person being unpredictable and a story being unpredictable is totally different in sentiment. Moreover, in real-life texts, a sentence tends to be various in length, and it’s common that within a piece of text, some subjects will be criticized and some praised, generating multipolarity and making it hard for sentiment models to analyze the true sentiment behind the text.
+
+Of course these problems are critical to determine the success of a sentiment model, but a more important question is:
+
+**Can text sentiment wholly represent the characteristics of a sentence?**
+
+The answer is probably NO, right? It is just like classifying people's credit base on their wealth, which is definitely partial and biased. Bias on people-related task are more addressed, whilst bias in text classifying is far less touched. And who knows what services we are using today are actually classifying text using only sentiment.
+
 
 ### 3. Data Annotation
 
