@@ -56,7 +56,14 @@ Of course these problems are critical to determine the success of a sentiment mo
 The answer is probably NO, right? It is just like classifying people's credit base on their wealth, which is definitely partial and biased. Bias on people-related task are more addressed, whilst bias in text classifying is far less touched. And who knows what services we are using today are actually classifying text using only sentiment.
 
 
-### 3. Data Annotation
+### 3. Issues in Data Annotation
+With AI being seemingly omnipotent and autonomous, it needed large amount of human curated input to actually understand the task and give meaningful results. Among these human labor, the most important is data annotation.
+
+Data annotation is the process of labeling the data available in various formats like text, video or images. For supervised machine learning, labeled data sets are required, so that machine can easily and clearly understand the input patterns.
+
+While we would expect the dataset to be annotated by 'researchers', in most cases it is actually not: they are being annotated by third-world workers and unemployeed people via sites such as CrowdFlower, Clickworker, Toluna, and Amazon’s Mechanical Turk. They complete mind-numbing tasks for hours on end, sometimes earning just pennies per job. A recent Mechanical Turk listing, for example, offered workers 80 cents to read a restaurant review and then answer a survey about their impressions of it; the time limit was 45 minutes.
+
+Working as a data labeler/annotator, you are forced to work fast for just these poorly-paid wages. And all that comes out of your labelling interface, go into the AI training and propagates as AI algorithms in the use.
 
 ### 4. Technology
 
