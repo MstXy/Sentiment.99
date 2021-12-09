@@ -82,6 +82,7 @@ As mentioned in the inspiration section, I want to use voice to control the labe
 
 ### 5. Design
 The overall design only uses two major colors: #ffb31c (as the text color) and #333333 (as the background color). It aims to follow a minimal design, with the orange text color sort of want to give users a hint on Amazon's feature color. Also, the font chosen is [Levi Adobe Dia](https://www.1001fonts.com/levi-adobe-dia-font.html) aiming to present a retro, old-computer style. This is partly because the Amazon MTurk interface is sort of old-fashioned, lack of design, and is just basic html to some sense, which appears to me a even more exploitation and ignorance towards its workers, and this project wants to also mention on that. I also added a webcam capture to the side of the interface, currently it has no other features. It is designed to present a sense a surveillance towards the data annotators, showing even worse treatment towards them.
+![cover](imgs/interface.png)
 
 ### 6. Reflection & Future Developments
 Overall, I am satisfied with this project. I tried to incorporate a lot of ideas into this one project, and in the end all pieces up together. It is also aimed to do something very different from my previous projects and also others' projects, both from the techniques used as well as the topics I am focusing on.
